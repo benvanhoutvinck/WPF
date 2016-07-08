@@ -1,0 +1,60 @@
+﻿<Window x:Class="PizzaWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="28">PIZZA BESTELLEN</TextBlock>
+        <StackPanel Grid.Row="1">
+            <RadioButton Content="small" GroupName="size" Margin="5 0" Checked="Size_Checked"></RadioButton>
+            <RadioButton Content="medium" GroupName="size" Margin="5 0" Checked="Size_Checked"></RadioButton>
+            <RadioButton Name="radioLarge" Content="large" GroupName="size" Margin="5 0" Checked="Size_Checked"></RadioButton>
+        </StackPanel>
+        <Rectangle Grid.Row="1" Width="250" Height="2" VerticalAlignment="Bottom" Fill="Black"></Rectangle>
+        <StackPanel Orientation="Vertical" Grid.Row="3">
+            <CheckBox IsChecked="True" IsEnabled="False" Name="CheckBoxTomaat" Content="tomaat" Margin="10 0"></CheckBox>
+            <CheckBox Name="CheckBoxKaas" Content="kaas" Margin="10 0"></CheckBox>
+            <CheckBox Name="CheckBoxHam" Content="ham" Margin="10 0"></CheckBox>
+            <CheckBox Name="CheckBoxAnanas" Content="ananas" Margin="10 0"></CheckBox>
+            <CheckBox Name="CheckBoxSalami" Content="salami" Margin="10 0"></CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <Button Name="ButtonKorst" Margin="10" Content="extra dikke korst"></Button>
+            <Button Name="ButtonKaas" Margin="10" Content="extra kaas"></Button>
+        </StackPanel>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15"></RowDefinition>
+                <RowDefinition Height="15"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Grid.RowSpan="2" Content="hoeveelheid:"></Label>
+            <Label Name="hoeveelheidLabel" Grid.Column="1" Grid.RowSpan="2" Content="3"></Label>
+            <RepeatButton Name="RepeatButtonPlus" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Height="15" Grid.Column="2" Grid.Row="0"  Interval="100" Delay="1000" Click="RepeatButtonPlus_Click">+</RepeatButton>
+            <RepeatButton Name="RepeatButtonMin" HorizontalAlignment="Left" VerticalAlignment="Top" Width="15" Height="15" Grid.Column="2" Grid.Row="1"  Interval="100" Delay="1000" Click="RepeatButtonMin_Click">-</RepeatButton>
+        </Grid>
+        <Button Grid.Row="3" Grid.Column="1" Width="50" Height="50" VerticalAlignment="Top">
+            <StackPanel>
+                <Image Source="Images/pizza.jpg"></Image>
+                <Label>Bold</Label>
+            </StackPanel>
+        </Button>
+        <Label Grid.ColumnSpan="2" Grid.Row="4" BorderBrush="Black" BorderThickness="2" Name="LabelTekst"
+Height="50">Dit is de tekstblok die we gaan manipuleren</Label>
+
+    </Grid>
+</Window>

@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfCursus.ButtonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Name="ButtonRed" Margin="10" Content="Rode
+achtergrond" Click="ButtonKleur_Click" Tag="Red"></Button>
+        <Button VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" Name="ButtonGreen"
+Margin="10" Content="Groene achtergrond" Click="ButtonKleur_Click" Tag="Green"></Button>
+        <Button VerticalAlignment="Top" Grid.Row="2" Grid.Column="0"
+Name="ButtonBlue" Margin="10,117,10,0" Content="Blauwe achtergrond" Click="ButtonKleur_Click" Tag="Blue"></Button>
+        <TextBlock Grid.Row="3" Grid.ColumnSpan="2">Dit is tekst over de hele breedte
+van het grid. Kijk het maar eens gaan over de hele breedte van het grid</TextBlock>
+        <GridSplitter Grid.Row="0" Grid.RowSpan="3" BorderBrush="Black"
+BorderThickness="2"></GridSplitter>
+    </Grid>
+</Window>

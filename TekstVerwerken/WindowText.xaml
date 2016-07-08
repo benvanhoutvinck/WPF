@@ -1,0 +1,30 @@
+﻿<Window x:Class="TekstVerwerken.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition> 
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition> 
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Margin="5" Content="_Gebruikersnaam"
+Target="{Binding ElementName=textBoxGebruikersnaam}"
+               BorderBrush="Black" BorderThickness="1"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Margin="5" Content="_Paswoord"
+Target="{Binding ElementName=psdBox}"
+               BorderBrush="Black" BorderThickness="1"></Label>
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="5" 
+Name="textBoxGebruikersnaam"></TextBox>
+        <PasswordBox Grid.Row="1" Grid.Column="1" Margin="5" 
+Name="psdBox" MaxLength="8" PasswordChar="?"></PasswordBox>
+        <Button Grid.Row="2" Content="Probeer maar aan te melden" Margin="0,10,0,10"
+Click="Button_Click"></Button>
+        <TextBlock Grid.Row="3" Name="textBlockAanmelding"></TextBlock>
+    </Grid>
+</Window>
